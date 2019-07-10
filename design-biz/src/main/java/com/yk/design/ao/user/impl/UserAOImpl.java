@@ -35,10 +35,4 @@ public class UserAOImpl implements UserAO {
             userDao.insert(userDo);
             logger.info("添加新用户成功！");
     }
-
-    public static void main(String[] args) {
-        Double[] CHANCE = {0.2d, 1d, 8d, 12d, 78.8d};
-        ArrayList list = new ArrayList(Arrays.asList(CHANCE));
-        System.out.println(list);
-    }
 }
