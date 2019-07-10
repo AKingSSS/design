@@ -6,5 +6,5 @@ public interface UserAO {
     /**
      * 登陆接口
      */
-    public void login(UserDo userDo);
+    public void register(UserDo userDo) throws Exception;
 }

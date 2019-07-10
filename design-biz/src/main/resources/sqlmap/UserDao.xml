@@ -63,7 +63,7 @@
     </sql>
 
     <insert id="insert" parameterType="com.yk.design.domain.user.UserDo">
-        insert into market.admin (
+        insert into wuchen.user (
         create_time
         ,modify_time
         ,deleted

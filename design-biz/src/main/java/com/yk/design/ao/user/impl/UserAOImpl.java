@@ -8,6 +8,10 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+
 /**
  * @ClassName UserAOImpl
  * @Description 用户接口
@@ -21,13 +25,20 @@ public class UserAOImpl implements UserAO {
     @Autowired
     private UserDao userDao;
     @Override
-    public void login(UserDo userDo) {
-        try {
+    public void register(UserDo userDo) throws Exception {
+            Date now = new Date();
+            userDo.setCreateTime(now);
+            userDo.setModifyTime(now);
+            userDo.setLastLoggedTime(now);
+            userDo.setDeleted(0);
+            userDo.setStatus(0);
             userDao.insert(userDo);
             logger.info("添加新用户成功！");
-        } catch (Exception e) {
-            logger.error("添加新用户失败！",e);
-            e.printStackTrace();
-        }
+    }
+
+    public static void main(String[] args) {
+        Double[] CHANCE = {0.2d, 1d, 8d, 12d, 78.8d};
+        ArrayList list = new ArrayList(Arrays.asList(CHANCE));
+        System.out.println(list);
     }
 }
