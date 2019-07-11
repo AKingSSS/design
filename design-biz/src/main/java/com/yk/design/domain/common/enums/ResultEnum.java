@@ -1,6 +1,5 @@
 package com.yk.design.domain.common.enums;
 
-import lombok.Data;
 
 /**
  * @ClassName ResultEnum
